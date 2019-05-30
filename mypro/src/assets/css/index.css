@@ -1,0 +1,9 @@
+/* 设置的是index.html 中的 body 和 html */
+body {
+  background-color: #324152;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
