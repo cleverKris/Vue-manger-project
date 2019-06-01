@@ -1,9 +1,14 @@
 /* 设置的是index.html 中的 body 和 html */
 body {
   background-color: #324152;
+  margin: 0; /* 取消home组件中的外边距 */
 }
 
 body, html {
   width: 100%;
   height: 100%;
+}
+
+h1 {
+  margin: 0;
 }

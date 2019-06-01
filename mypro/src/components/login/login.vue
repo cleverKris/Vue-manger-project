@@ -53,7 +53,7 @@
             //那么开始发送请求
             //统一设置过axios的请求路径,相当于:http://localhost:8888/api/private/v1/login
             //提交的参数为 当前页面 双向数据绑定的一个对象 对象中存放着用户名和密码
-            this.$http.post('/login', this.ruleForm).then(result => {
+            this.$http.post('login', this.ruleForm).then(result => {
               let {data, meta} = result.data;
               if (meta.status === 200) {
                 //自定义弹出提示框
@@ -61,9 +61,12 @@
                   message: meta.msg,
                   type: 'success'
                 });
-
                 //跳转到 home
                 this.$router.push('/home');
+
+                // console.log(data.token); //可以拿到token
+                //使用window.localstorage将token保存起来
+                localStorage.setItem('token', data.token);
               } else {
                 this.$message.error(meta.msg);  //用户不存在 or 密码错误
               }
