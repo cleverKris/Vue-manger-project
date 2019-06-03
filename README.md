@@ -44,7 +44,7 @@ vue &amp; element-ui &amp; vue-cli &amp; vue-router &amp; axios
   
   4.使用请求拦截器interceptors完成axios除了在login路由之外统一设置请求头的操作
   
-  5.使用ES7的语法，async & await 优化了部分代码因为异步操作-回调函数而阅读性不高的问题
+  5.使用ES7的语法，async & await 优化了所有代码因为异步操作-回调函数而阅读性不高的问题
   
   6.完成了rights.vue-权限管理-权限列表的所有数据渲染
   
