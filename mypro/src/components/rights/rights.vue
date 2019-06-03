@@ -1,20 +1,15 @@
 <template>
-  <!--根元素-->
   <el-card>
     <!--面包屑导航-->
-    <!--使用组件-->
-    <bread-nav :nav1="'权限管理'" :nav2="'权限列表'"/>
-
+    <breadNav :nav1="'权限管理'" :nav2="'权限列表'"/>
     <!--表格-->
-    <!--:data="tableData" : 数据源-->
-    <el-table :data="tableData" style="width: 100%" :border="true">
+    <el-table :border="true" :data="tableData" style="width: 100%" class="myTable">
       <el-table-column type="index"></el-table-column>
       <el-table-column prop="authName" label="权限名称" width="180"></el-table-column>
       <el-table-column prop="path" label="路径" width="180"></el-table-column>
-      <el-table-column label="层级" width="180">
-        <!-- scope.row  : 当前行的数据源 -->
+      <el-table-column prop="level" label="层级" width="180">
         <template slot-scope="scope">
-          {{ scope.row.level ==='0'?'一级':(scope.row.level === '1'?'二级':'三级') }}
+          {{ scope.row.level === '0' ? '一级' : (scope.row.level === '1' ? '二级' : '三级') }}
         </template>
       </el-table-column>
     </el-table>
@@ -22,31 +17,33 @@
 </template>
 
 <script>
-  //引入子组件
   import breadNav from '../layout/breadNav/breadNav'
 
   export default {
     //数据
     data() {
       return {
-        tableData: [] //所有权限列表
+        tableData: [] //表格中的数据源
       }
     },
     //方法
     methods: {
-      //获取所有权限列表
-      async getRightList() {
+      //获取所有权限数据
+      async getAllRightsData() {
         let result = await this.$http.get(`rights/list`);
         let {data, meta} = result.data;
         if (meta.status === 200) {
           this.tableData = data;
+        } else {
+          this.$message.error(meta.msg);
         }
       }
     },
+    //生命周期钩子 created是最早可以访问data和methods的阶段
     created() {
-      this.getRightList();
+      this.getAllRightsData();
     },
-    //定义子组件(私有组件)
+    //定义私有组件
     components: {
       breadNav
     }
@@ -54,5 +51,8 @@
 </script>
 
 <style scoped>
-
+  /* 表格 */
+  .myTable {
+    margin-top: 10px;
+  }
 </style>

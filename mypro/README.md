@@ -1,4 +1,4 @@
-# mypro
+# vuepro
 
 > A Vue.js project
 

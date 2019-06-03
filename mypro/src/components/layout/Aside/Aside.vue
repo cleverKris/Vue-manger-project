@@ -1,18 +1,18 @@
-<!--侧边栏组件-->
 <template>
-  <!--:router="true" : 开启vue-router模式 -->
-  <el-menu :router="true" :unique-opened="true" default-active="2" class="mymenu el-menu-vertical-demo"
-           background-color="#fff"
-           text-color="#444">
-    <!-- 子选项 -->
+  <!--菜单栏-->
+  <!--:router="true" : 开启vue-router模式-->
+  <el-menu :router="true" :unique-opened="true" default-active="2" class="el-menu-vertical-demo"
+           background-color="rgb(211,220,230)" text-color="#333"
+           active-text-color="rgb(53,73,94)">
+    <!--菜单栏的子选项-->
     <el-submenu index="1">
-      <!-- 子选项的标题 -->
+      <!--设置导航的一级菜单-->
       <template slot="title">
+        <!--slot:title菜单栏的标题-->
         <i class="el-icon-location"></i>
         <span>用户管理</span>
       </template>
-      <!-- 子选项中的子选项：二级选项 -->
-      <!--index="/users" : 设置点击跳转的路由-->
+      <!--index="/users" : 等同于请求路由-->
       <el-menu-item index="/users">
         <i class="el-icon-menu"></i>
         <span>用户列表</span>
@@ -31,12 +31,11 @@
         <i class="el-icon-menu"></i>
         <span>权限列表</span>
       </el-menu-item>
-
     </el-submenu>
     <el-submenu index="3">
       <template slot="title">
         <i class="el-icon-location"></i>
-        <span>商品管事</span>
+        <span>商品管理</span>
       </template>
       <el-menu-item>
         <i class="el-icon-menu"></i>
@@ -54,7 +53,7 @@
     <el-submenu index="4">
       <template slot="title">
         <i class="el-icon-location"></i>
-        <span>订单管事</span>
+        <span>订单管理</span>
       </template>
       <el-menu-item>
         <i class="el-icon-menu"></i>
@@ -66,11 +65,13 @@
         <i class="el-icon-location"></i>
         <span>数据统计</span>
       </template>
+
       <el-menu-item>
         <i class="el-icon-menu"></i>
         <span>数据报表</span>
       </el-menu-item>
     </el-submenu>
+
   </el-menu>
 </template>
 
@@ -79,7 +80,5 @@
 </script>
 
 <style scoped>
-  .mymenu {
-    height: 100%;
-  }
+
 </style>

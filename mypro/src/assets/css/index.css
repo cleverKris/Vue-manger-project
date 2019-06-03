@@ -1,7 +1,7 @@
-/* 设置的是index.html 中的 body 和 html */
+/* 设置的是index.html中的样式(全局样式) */
 body {
   background-color: #324152;
-  margin: 0; /* 取消home组件中的外边距 */
+  margin: 0; /* 清除布局容器时的body中的外边距 */
 }
 
 body, html {
@@ -9,6 +9,7 @@ body, html {
   height: 100%;
 }
 
+/* home.vue中的头部的h1标签*/
 h1 {
-  margin: 0;
+  margin: 0; /* 清除外边距 */
 }

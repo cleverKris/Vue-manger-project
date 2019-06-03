@@ -1,38 +1,51 @@
+//专属路由文件
 import Vue from 'vue'
-//引入路由
+
+//引入了vue-router
 import Router from 'vue-router'
-//使用路由
+//使用vue-router
 Vue.use(Router);
 
-//引入login组件
+//引入login.vue组件
 import login from '../components/login/login'
-//引入home组件
+//引入home.vue组件
 import home from '../components/home/home'
-//引入users组件
+//引入users.vue组件
 import users from '../components/users/users'
-//引入rights组件
+//引入rights.vue组件
 import rights from '../components/rights/rights'
-//引入roles组件
+//引入roles.vue组件
 import roles from '../components/roles/roles'
 
+
+//暴露路由对象
 export default new Router({
-  //组件对应的路由选项
+  //这是组件对应的路由选项
   routes: [
-    //访问home的第二种方式 根目录:'/',使用路由重定向
-    // 方式1:
-    // {path: '/', redirect: '/home'}
-    // 方式2:
+    //对根目录的路径访问进行处理 使用路由重定向 指向 /home
+    //方式1:
+    //{path: '/', redirect: '/home'}
+    //方式2:
     {path: '/', redirect: {name: 'home'}},
     {path: '/login', component: login, name: 'login'}, //login组件对应的路由选项
+    //home组件对应的路由选项  name:别名
     {
-      path: '/home', component: home, name: 'home',
-      //home父路由 对应的子路由
-      children: [
-        {path: '/users', name: 'users', component: users}, //users组件对应的路由选项
-        {path: '/rights', name: 'rights', component: rights}, //rights组件对应的路由选项
-        {path: '/roles', name: 'roles', component: roles} //roles组件对应的路由选项
+      path: '/home', component: home, name: 'home', children: [
+        {path: '/users', component: users, name: 'users'}, //home的子路由 users
+        {path: '/rights', component: rights, name: 'rights'}, //home的子路由 rights
+        {path: '/roles', component: roles, name: 'roles'} //home的子路由 roles
       ]
-    } //home组件对应的路由选项 name:别名
+
+    }
 
   ]
 })
+
+
+/*
+* 之前路由的写法
+* 1.let routes = [ {},{},{} ] 路由选项
+* 2.let router = new Router({ routes:routes })
+* 3.暴露 export default router
+* 4.在main.js中挂载到视图容器上 router
+* */
