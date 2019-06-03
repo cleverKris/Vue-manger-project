@@ -10,6 +10,10 @@ import login from '../components/login/login'
 import home from '../components/home/home'
 //引入users组件
 import users from '../components/users/users'
+//引入rights组件
+import rights from '../components/rights/rights'
+//引入roles组件
+import roles from '../components/roles/roles'
 
 export default new Router({
   //组件对应的路由选项
@@ -24,7 +28,9 @@ export default new Router({
       path: '/home', component: home, name: 'home',
       //home父路由 对应的子路由
       children: [
-        {path: '/users', name: 'users', component: users} //users组件对应的路由选项
+        {path: '/users', name: 'users', component: users}, //users组件对应的路由选项
+        {path: '/rights', name: 'rights', component: rights}, //rights组件对应的路由选项
+        {path: '/roles', name: 'roles', component: roles} //roles组件对应的路由选项
       ]
     } //home组件对应的路由选项 name:别名
 

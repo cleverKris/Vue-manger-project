@@ -16,7 +16,7 @@
 
         <!--主体内容区域-->
         <el-main class="rightMain">
-          <!--添加一个路由-->
+          <!--将来要渲染到home中的容器-->
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -82,12 +82,6 @@
     color: #333;
     /*text-align: center;*/
     /*line-height: 160px;*/
-  }
-
-
-  /* 右侧主体内容 */
-  .rightMain {
-    padding: 0 0 0 10px; /* 将上右下的内边距清除 左边内边距设置10px */
   }
 
 </style>
