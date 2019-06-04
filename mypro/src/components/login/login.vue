@@ -58,10 +58,8 @@
                   message: meta.msg,
                   type: 'success'
                 });
-
                 //将token保存起来
                 localStorage.setItem('token', data.token);
-
                 //跳转 /home
                 this.$router.push('/home');
               } else {

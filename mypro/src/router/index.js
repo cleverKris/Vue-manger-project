@@ -16,10 +16,14 @@ import users from '../components/users/users'
 import rights from '../components/rights/rights'
 //引入roles.vue组件
 import roles from '../components/roles/roles'
+//引入categories.vue组件
+import categories from '../components/categories/categories'
+
+//在其它文件引入message
+import {Message} from 'element-ui'
 
 
-//暴露路由对象
-export default new Router({
+let router = new Router({
   //这是组件对应的路由选项
   routes: [
     //对根目录的路径访问进行处理 使用路由重定向 指向 /home
@@ -33,13 +37,34 @@ export default new Router({
       path: '/home', component: home, name: 'home', children: [
         {path: '/users', component: users, name: 'users'}, //home的子路由 users
         {path: '/rights', component: rights, name: 'rights'}, //home的子路由 rights
-        {path: '/roles', component: roles, name: 'roles'} //home的子路由 roles
+        {path: '/roles', component: roles, name: 'roles'}, //home的子路由 roles
+        {path: '/categories', component: categories, name: 'categories'} //home的子路由 categories
       ]
 
     }
-
   ]
-})
+});
+
+//为路由添加一个beforeEach方法
+router.beforeEach((to, from, next) => {
+  // console.log(to);
+  // console.log(from);
+  if (to.path != '/login') {
+    //判断token是否存在
+    if (!localStorage.getItem('token')) { //如果token不存在说明 没有进行登录的身份验证
+      //提示框
+      Message({
+        type: 'warning',
+        message: '你还没有登录'
+      });
+      router.push({name: 'login'});
+    }
+  }
+  next();
+});
+
+//暴露路由对象
+export default router;
 
 
 /*

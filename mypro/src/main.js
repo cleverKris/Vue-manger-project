@@ -18,6 +18,11 @@ import myAxios from './assets/js/myAxios'
 //使用插件
 Vue.use(myAxios);
 
+//引入element-tree-grid插件
+import ElTreeGrid from 'element-tree-grid'
+//定义为全局组件
+Vue.component(ElTreeGrid.name, ElTreeGrid);
+
 //引入自定义全局样式
 import './assets/css/index.css'
 
