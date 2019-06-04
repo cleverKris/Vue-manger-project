@@ -3,7 +3,7 @@
   <el-row class="homeHeaderRow">
     <el-col :span="4" class="homeHeaderCol">
       <div class="grid-content bg-purple">
-        <img src="../../../assets/logo.png" alt="" style="width: 60px">
+        <img src="../../../assets/logo.png" alt="logo" title="kris">
       </div>
     </el-col>
     <el-col :span="16" class="homeHeaderCol">
