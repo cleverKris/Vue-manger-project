@@ -68,5 +68,15 @@ vue &amp; element-ui &amp; vue-cli &amp; vue-router &amp; axios
     
     3.3设置新的权限，在el-tree中获取最新的一级二级三级权限提交到服务器，并更新
 
+  4.完成了根据不同的用户登录对应的角色，角色对应的权限，按照权限从高到低的原则动态生成左侧菜单栏 Aside.vue
+  
+  5.使用Vue路由中的导航守卫，给路由对象添加beforeEach方法，完成了可以除了/login 对登录页面的请求，其它的页面都统一进行身份验证
+  
+  6.完成categories.vue 商品管理 - 商品分类
+    
+    6.1使用element-tree-grid插件生成多级数据
+    
+    6.2针对数据的显示使用element-ui中的分页组件el-pagination
+
   Loading...
 ```
