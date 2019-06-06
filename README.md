@@ -78,5 +78,31 @@ vue &amp; element-ui &amp; vue-cli &amp; vue-router &amp; axios
     
     6.2针对数据的显示使用element-ui中的分页组件el-pagination
 
+# 6.6
+
+  1.完成了商品管理 - 商品列表 goods.vue
+  
+  2.在项目中使用sass(最新版本是scss) or less书写css样式
+  
+  3.完成了商品管理 - 商品列表 - 添加商品
+    
+    3.1使用element-ui中的steps步骤条 & tabs标签页 & 级联选择器
+    
+    3.2根据级联选择器中选中的商品分类，动态渲染tabs标签页中的 商品属性 和 商品参数
+    
+    3.3使用element-ui中的upload上传组件，完成添加商品图片到服务器的文件夹中进行存储
+    
+    3.4添加商品图片时，操作文件上传列表，进行删除和预览功能
+    
+    3.5使用富文本编辑器
+    
+    3.6完成添加商品的请求
+  
+  4.在vue中使用百度地图API
+  
+    4.1在webpack.base.conf.js项目配置文件中配置百度地图构造器 BMap
+
+  5.在vue中使用echarts对服务器响应回来的数据进行图形化展示
+  
   Loading...
 ```
