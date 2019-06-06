@@ -6,25 +6,20 @@ import Router from 'vue-router'
 //使用vue-router
 Vue.use(Router);
 
-//引入login.vue组件
-import login from '../components/login/login'
-//引入home.vue组件
-import home from '../components/home/home'
-//引入users.vue组件
-import users from '../components/users/users'
-//引入rights.vue组件
-import rights from '../components/rights/rights'
-//引入roles.vue组件
-import roles from '../components/roles/roles'
-//引入categories.vue组件
-import categories from '../components/categories/categories'
-//引入goods.vue组件
-import goods from '../components/goods/goods'
-//引入goodsadd.vue组件
-import goodsadd from '../components/goodsadd/goodsadd'
+
+import login from '../components/login/login' //引入login.vue组件
+import home from '../components/home/home' //引入home.vue组件
+import users from '../components/users/users' //引入users.vue组件
+import rights from '../components/rights/rights' //引入rights.vue组件
+import roles from '../components/roles/roles' //引入roles.vue组件
+import categories from '../components/categories/categories' //引入categories.vue组件
+import goods from '../components/goods/goods' //引入goods.vue组件
+import goodsadd from '../components/goodsadd/goodsadd' //引入goodsadd.vue组件
+import orders from '../components/orders/orders' //引入orders.vue组件
+import reports from '../components/reports/reports' //引入reports.vue组件
 
 //在其它文件引入message
-import {Message} from 'element-ui'
+import { Message } from 'element-ui'
 
 
 let router = new Router({
@@ -34,17 +29,19 @@ let router = new Router({
     //方式1:
     //{path: '/', redirect: '/home'}
     //方式2:
-    {path: '/', redirect: {name: 'home'}},
-    {path: '/login', component: login, name: 'login'}, //login组件对应的路由选项
+    { path: '/', redirect: { name: 'home' } },
+    { path: '/login', component: login, name: 'login' }, //login组件对应的路由选项
     //home组件对应的路由选项  name:别名
     {
       path: '/home', component: home, name: 'home', children: [
-        {path: '/users', component: users, name: 'users'}, //home的子路由 users
-        {path: '/rights', component: rights, name: 'rights'}, //home的子路由 rights
-        {path: '/roles', component: roles, name: 'roles'}, //home的子路由 roles
-        {path: '/categories', component: categories, name: 'categories'}, //home的子路由 categories
-        {path: '/goods', component: goods, name: 'goods'}, //home的子路由 goods
-        {path: '/goods/add', component: goodsadd, name: 'goodsadd'} //home的子路由 goods
+        { path: '/users', component: users, name: 'users' }, //home的子路由 users
+        { path: '/rights', component: rights, name: 'rights' }, //home的子路由 rights
+        { path: '/roles', component: roles, name: 'roles' }, //home的子路由 roles
+        { path: '/categories', component: categories, name: 'categories' }, //home的子路由 categories
+        { path: '/goods', component: goods, name: 'goods' }, //home的子路由 goods
+        { path: '/goods/add', component: goodsadd, name: 'goodsadd' }, //home的子路由 goodsadd
+        { path: '/orders', component: orders, name: 'orders' }, //home的子路由 orders
+        { path: '/reports', component: reports, name: 'reports' } //home的子路由 reports
       ]
 
     }
@@ -63,7 +60,7 @@ router.beforeEach((to, from, next) => {
         type: 'warning',
         message: '你还没有登录'
       });
-      router.push({name: 'login'});
+      router.push({ name: 'login' });
     }
   }
   next();

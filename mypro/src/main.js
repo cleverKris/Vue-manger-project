@@ -37,6 +37,9 @@ import 'quill/dist/quill.bubble.css'
 //使用富文本编辑器
 Vue.use(VueQuillEditor);
 
+//全局引用地图组件
+import BMap from 'BMap'
+
 
 //引入自定义全局样式
 import './assets/css/index.css'

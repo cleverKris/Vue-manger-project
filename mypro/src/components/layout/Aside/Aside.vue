@@ -5,7 +5,7 @@
            background-color="rgb(211,220,230)" text-color="#333"
            active-text-color="rgb(53,73,94)">
     <!--菜单栏的子选项-->
-    <el-submenu :index="item1.path" v-for="item1 in menusList">
+    <el-submenu :index="item1.path" v-for="(item1,index1) in menusList" :key="index1">
       <!--设置导航的一级菜单-->
       <template slot="title">
         <!--slot:title菜单栏的标题-->
@@ -14,7 +14,7 @@
       </template>
       <!--二级菜单-->
       <!--index="/users" : 等同于请求路由-->
-      <el-menu-item v-for="item2 in item1.children" :index=" '/' + item2.path ">
+      <el-menu-item v-for="(item2,index2) in item1.children" :index=" '/' + item2.path " :key="index2">
         <i class="el-icon-menu"></i>
         <span>{{ item2.authName }}</span>
       </el-menu-item>

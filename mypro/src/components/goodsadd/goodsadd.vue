@@ -101,8 +101,8 @@
       </el-tab-pane>
       <!--5.商品内容-->
       <el-tab-pane label="商品内容" name="fifth">
-        <el-button type="primary">添加商品</el-button>
-        <quill-editor :content="content">
+        <el-button type="primary" @click="addGoods">添加商品</el-button>
+        <quill-editor v-model="content">
         </quill-editor>
 
       </el-tab-pane>
@@ -176,7 +176,7 @@
         ImgDialogFormVisible: false, //控制的是图片预览对话框的显示与隐藏
         imgUrl: '', //预览图片的路径
 
-        content: '我是富文本编辑器中的内容', //富文本编辑器中的内容
+        content: '', //富文本编辑器中的内容
 
       }
     },
@@ -285,6 +285,32 @@
         })
 
 
+      },
+      //为添加商品 按钮绑定点击事件
+      async addGoods() {
+        let postAddObj = {
+          goods_name: this.addFormObj.goods_name,
+          goods_cat: this.menuSelect.join(','),
+          goods_price: this.addFormObj.goods_price,
+          goods_number: this.addFormObj.goods_number,
+          goods_weight: this.addFormObj.goods_weight,
+          goods_introduce: this.content
+        };
+
+        let result = await this.$http.post('goods', postAddObj);
+
+        let {data, meta} = result.data;
+        if (meta.status === 201) {
+          this.$message({
+            type: 'success',
+            message: meta.msg
+          });
+
+          //跳转到goods
+          this.$router.push('/goods');
+        } else {
+          this.$message.error(meta.msg);
+        }
       }
     },
     created() {
