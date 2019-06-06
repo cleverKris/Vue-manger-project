@@ -14,7 +14,7 @@
       </template>
       <!--二级菜单-->
       <!--index="/users" : 等同于请求路由-->
-      <el-menu-item v-for="item2 in item1.children" :index="item2.path">
+      <el-menu-item v-for="item2 in item1.children" :index=" '/' + item2.path ">
         <i class="el-icon-menu"></i>
         <span>{{ item2.authName }}</span>
       </el-menu-item>

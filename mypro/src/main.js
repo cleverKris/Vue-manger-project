@@ -23,6 +23,21 @@ import ElTreeGrid from 'element-tree-grid'
 //定义为全局组件
 Vue.component(ElTreeGrid.name, ElTreeGrid);
 
+//引入自定义moment插件
+import myMoment from './assets/js/myMoment'
+//使用插件
+Vue.use(myMoment);
+
+//引入富文本编辑器
+import VueQuillEditor from 'vue-quill-editor'
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+//使用富文本编辑器
+Vue.use(VueQuillEditor);
+
+
 //引入自定义全局样式
 import './assets/css/index.css'
 

@@ -18,6 +18,10 @@ import rights from '../components/rights/rights'
 import roles from '../components/roles/roles'
 //引入categories.vue组件
 import categories from '../components/categories/categories'
+//引入goods.vue组件
+import goods from '../components/goods/goods'
+//引入goodsadd.vue组件
+import goodsadd from '../components/goodsadd/goodsadd'
 
 //在其它文件引入message
 import {Message} from 'element-ui'
@@ -38,7 +42,9 @@ let router = new Router({
         {path: '/users', component: users, name: 'users'}, //home的子路由 users
         {path: '/rights', component: rights, name: 'rights'}, //home的子路由 rights
         {path: '/roles', component: roles, name: 'roles'}, //home的子路由 roles
-        {path: '/categories', component: categories, name: 'categories'} //home的子路由 categories
+        {path: '/categories', component: categories, name: 'categories'}, //home的子路由 categories
+        {path: '/goods', component: goods, name: 'goods'}, //home的子路由 goods
+        {path: '/goods/add', component: goodsadd, name: 'goodsadd'} //home的子路由 goods
       ]
 
     }
