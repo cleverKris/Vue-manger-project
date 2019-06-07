@@ -10,11 +10,9 @@ import elementUi from 'element-ui'
 Vue.use(elementUi);
 //引入element-ui的css样式
 import '../node_modules/element-ui/lib/theme-chalk/index.css'
-//引入element-ui的js文件
-import '../node_modules/element-ui/lib/index'
 
 //引入自定义axios插件
-import myAxios from './assets/js/myAxios'
+import myAxios from './assets/js/myAxios.js'
 //使用插件
 Vue.use(myAxios);
 

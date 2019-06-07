@@ -7,16 +7,28 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import login from '../components/login/login' //引入login.vue组件
-import home from '../components/home/home' //引入home.vue组件
-import users from '../components/users/users' //引入users.vue组件
-import rights from '../components/rights/rights' //引入rights.vue组件
-import roles from '../components/roles/roles' //引入roles.vue组件
-import categories from '../components/categories/categories' //引入categories.vue组件
-import goods from '../components/goods/goods' //引入goods.vue组件
-import goodsadd from '../components/goodsadd/goodsadd' //引入goodsadd.vue组件
-import orders from '../components/orders/orders' //引入orders.vue组件
-import reports from '../components/reports/reports' //引入reports.vue组件
+// import login from '../components/login/login' //引入login.vue组件
+// import home from '../components/home/home' //引入home.vue组件
+// import users from '../components/users/users' //引入users.vue组件
+// import rights from '../components/rights/rights' //引入rights.vue组件
+// import roles from '../components/roles/roles' //引入roles.vue组件
+// import categories from '../components/categories/categories' //引入categories.vue组件
+// import goods from '../components/goods/goods' //引入goods.vue组件
+// import goodsadd from '../components/goodsadd/goodsadd' //引入goodsadd.vue组件
+// import orders from '../components/orders/orders' //引入orders.vue组件
+// import reports from '../components/reports/reports' //引入reports.vue组件
+
+
+const login = () => import('../components/login/login'); //引入login.vue组件
+const home = () => import('../components/home/home'); //引入home.vue组件
+const users = () => import('../components/users/users'); //引入users.vue组件
+const rights = () => import('../components/rights/rights'); //引入rights.vue组件
+const roles = () => import('../components/roles/roles'); //引入roles.vue组件
+const categories = () => import('../components/categories/categories'); //引入categories.vue组件
+const goods = () => import('../components/goods/goods'); //引入goods.vue组件
+const goodsadd = () => import('../components/goodsadd/goodsadd'); //引入goodsadd.vue组件
+const orders = () => import('../components/orders/orders'); //引入orders.vue组件
+const reports = () => import('../components/reports/reports'); //引入reports.vue组件
 
 //在其它文件引入message
 import { Message } from 'element-ui'

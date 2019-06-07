@@ -24,9 +24,14 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
-  //配置百度地图
+  //外部配置：不让webpack打包到vendor.js
+  //配置方式：key:value  ---> import Vue from "vue"
+  //key：  引用的第三方包的名称
+  //value：返回的构造器
   externals: {
-    "BMap": "BMap"
+    "BMap": "BMap", //配置百度地图
+    "vue":"Vue", //配置vue
+    "element-ui": "ELEMENT" //配置element-ui
   },
   output: {
     path: config.build.assetsRoot,
