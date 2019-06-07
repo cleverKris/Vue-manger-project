@@ -1,7 +1,11 @@
 # Vue-manger-project
-vue &amp; element-ui &amp; vue-cli &amp; vue-router &amp; axios
+文件夹说明：mypro是该项目打包前的所有源文件；
 
-> mypro 是前端Vue项目，后台的api-server文件夹暂未上传！
+
+## 使用说明
+
+> 使用 git clone 该项目后，您需要做以下几件事情，即可操作！
+
 
 ## Update
 
