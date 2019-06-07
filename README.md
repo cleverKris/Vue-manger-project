@@ -103,6 +103,16 @@ vue &amp; element-ui &amp; vue-cli &amp; vue-router &amp; axios
     4.1在webpack.base.conf.js项目配置文件中配置百度地图构造器 BMap
 
   5.在vue中使用echarts对服务器响应回来的数据进行图形化展示
+
+# 6.7
+
+  1.打包项目之前，进行了首屏优化
+    
+    1.1使用路由懒加载，减少第一次进入页面时对服务器的请求的文件数量
+    
+    1.2使用cdn加速，用来加载第三方包
+
+  2.进行了打包项目的操作 npm run build - dist文件
   
   Loading...
 ```
