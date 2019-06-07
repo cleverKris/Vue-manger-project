@@ -1,10 +1,12 @@
 # Vue-manger-project
-> 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是
+> 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是前端Vue经过打包后的文件，浏览起来更便捷
 
 
 ## 使用说明
 
 > 使用 git clone 该项目后，您需要做以下几件事情，即可操作！
+
+> 1.如果您是
 
 
 ## Update
