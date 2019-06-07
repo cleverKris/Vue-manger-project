@@ -1,3 +1,4 @@
+``` bash 感谢您的使用！ ```
 # Vue-manger-project
 > 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是前端Vue经过打包后的文件，浏览起来更便捷
 
@@ -6,7 +7,9 @@
 
 > 使用 git clone 该项目后，您需要做以下几件事情，即可操作！
 
-1.如果您是
+> 1.如果您只需要简单的浏览该项目，只需要在api-server目录下，根据package.json文件中的项目依赖项，打开命令行工具输入cnpm install，下载完成后，点击start.bat开启服务器；并在dist目录下打开命令行工具，输入http-server ./，开启本地服务器后，即可开始浏览项目
+
+> 2.如果您需要操作源文件，建议您操作mypro文件夹，同样下载所有项目依赖项后，使用start.bat开启前端服务，即可开始操作该项目
 
 
 ## Update
