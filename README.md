@@ -1,5 +1,5 @@
 # Vue-manger-project
-文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是
+> 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是
 
 
 ## 使用说明
