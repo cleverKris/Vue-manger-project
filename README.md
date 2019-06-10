@@ -3,7 +3,7 @@
 # Vue-manger-project
 > 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是前端Vue经过打包后的文件，浏览起来更便捷
 
-> Author：email:751359974@qq.com tel:13060882701
+> Author：email:k980902@163.com tel:13060882701
 
 ## 使用说明
 
@@ -19,7 +19,7 @@
 ## Update
 
 ``` bash
-# 5.31
+# v1.0
 
   1.使用vue-cli搭建项目结构
   
@@ -31,7 +31,7 @@
   
   5.完成登录成功后跳转到home首页，并对直接 '/' 的路由进行重定向，访问 '/' 会跳转到home页面
 
-# 6.1 happy children day! ^0^
+# v1.1 happy children day! ^0^
   
   1.使用token完成身份验证
   
@@ -47,7 +47,7 @@
     
     4.2使用axios的post发送请求给服务器，完成用户的新增功能
     
-# 6.3
+# v1.2
 
   1.完成用户列表的增删改查
   
@@ -67,7 +67,7 @@
 
   8.封装了 breadNav.vue 面包屑导航，并使用组件之间的传参 > 父传子接的方式完成各个组件中的面包屑导航
   
-# 6.4
+# v1.3
   
   1.完成roles.vue中权限管理 - 角色列表中的增删改查
   
@@ -91,7 +91,7 @@
     
     6.2针对数据的显示使用element-ui中的分页组件el-pagination
 
-# 6.6
+# v1.4
 
   1.完成了商品管理 - 商品列表 goods.vue
   
@@ -117,7 +117,7 @@
 
   5.在vue中使用echarts对服务器响应回来的数据进行图形化展示
 
-# 6.7 Happy Dragon Boat Festival ^0^
+# v1.5 Happy Dragon Boat Festival ^0^
 
   1.打包项目之前，进行了首屏优化
     
