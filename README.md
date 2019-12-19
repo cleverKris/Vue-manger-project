@@ -3,7 +3,7 @@
 # Vue-manger-project
 > 文件夹说明：mypro是该项目前端Vue打包前的所有源文件；api-server是后台源文件；dist是前端Vue经过打包后的文件，浏览起来更便捷
 
-> Author：email:k980902@163.com tel:13060882701
+> Author：email:751359974@qq.com tel:13060882701
 
 ## 使用说明
 
